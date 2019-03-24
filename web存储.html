@@ -29,7 +29,7 @@
     </style>
 </head>
 <body>
-    <input type="search" id="search" class="search" name="commodity"  autofocus="autofocus"  placeholder="请输入想要查找到商品" >
+    <input type="search" id="search" class="search" name="commodity"  autofocus="autofocus"  placeholder="请输入想查找的商品" >
     <input type="button" value="搜索" onclick="saveStorage('search');" style="width: 155px;height: 40px;color: grey" ><br/>
     最近搜索<br/>
     <div id="div" style="width: 360px;background: white"></div>
@@ -92,10 +92,9 @@
         {
             var div = document.getElementById('div');
             var div1 =document.createElement('div');
-            var text1 = document.createTextNode('暂无查询记录');
+            var text1 = document.createTextNode('暂无查询记录!');
             div1.appendChild(text1);
             div.appendChild(div1);
-            console.log("zhrgirhe");
         }
     }
 
