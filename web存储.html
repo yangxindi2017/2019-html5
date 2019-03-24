@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>web存储</title>
+    <style type="text/css">
+    div{
+        background: lightgrey;
+        margin: 10px 10px 5px 0px;
+        float: left;
+    }
+    #search:focus{
+        border-style: solid;
+        border-color: #e9b76e;
+        outline: none;
+       
+    }
+    .search{
+        width: 200px ;
+        height: 45px;
+    }
+    .button{
+        color:honeydew ;
+        font-size: 15px;
+        float: right;
+    }
+    </style>
+</head>
+<body>
+    <input type="search" id="search" class="search" name="commodity"  autofocus="autofocus"  placeholder="请输入想要查找到商品" >
+    <input type="button" value="搜索" onclick="saveStorage('search');" style="width: 155px;height: 40px;color: grey" ><br/>
+    最近搜索<br/>
+    <div id="div" style="width: 360px;background: white"></div>
+    <div id="cdiv" style="float:left;margin-top:20px; background: white"">
+        <input type="button" id="clear" value="x" class="button" onclick="clearStorage();">
+    </div>
+    
+</body>
+<script type="text/javascript">
+
+    //添加信息
+    function saveStorage(id){
+        var data = document.getElementById(id).value;
+        var time = new Date().getTime();
+        for(var i=0;i<=localStorage.length;i++)
+        {
+            var key = localStorage.key(i);
+            var value = localStorage.getItem(key);
+            if(localStorage.length == 0){
+                localStorage.setItem(time,data);
+                var div = document.getElementById('div');
+                var div1 =document.createElement('div');
+                var text1 = document.createTextNode(data);
+                div.appendChild(div1);
+                div1.appendChild(text1);
+            }
+            else if(value == data){
+                break;
+            } 
+            else if(value!=data && i == localStorage.length-1)
+            {
+                localStorage.setItem(time,data);
+                var div = document.getElementById('div');
+                var div1 =document.createElement('div');
+                var text1 = document.createTextNode(data);
+                div.appendChild(div1);
+                div1.appendChild(text1);
+            }      
+        }    
+        var clear = document.getElementById('clear');
+        var adiv = document.getElementById('div');
+        var aheight=adiv.offsetHeight;
+        if(aheight>36){
+            clear.style.marginTop =aheight-36 + 'px' ;
+        }
+    }
+    //清除
+    function clearStorage() {
+        localStorage.clear();
+        var search= document.getElementById('search');
+        var clear = document.getElementById('clear');
+        var adiv = document.getElementById('div');
+        adiv.innerHTML= '';
+        clear.style.marginTop =0 + 'px' ;
+        search.value="请输入想要查找到商品";
+
+//        console.log(adiv.firstElementChild);
+
+        if(adiv.firstElementChild == null)
+        {
+            var div = document.getElementById('div');
+            var div1 =document.createElement('div');
+            var text1 = document.createTextNode('暂无查询记录');
+            div1.appendChild(text1);
+            div.appendChild(div1);
+            console.log("zhrgirhe");
+        }
+    }
+
+
+</script>
+</html>
