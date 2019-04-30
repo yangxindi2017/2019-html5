@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>刮奖效果</title>
+    <style>
+        div{
+            height: 108px;
+            width: 267px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div">
+        <canvas id="mask" width="267" height="108" ></canvas>
+    </div>
+    
+</body>
+<script>
+    //设置背景图
+    var arr=["一等奖.jpg","二等奖.jpg","谢谢.jpg"];
+    window.onload=function(){
+        var number =Math.floor(Math.random()*3) ;
+        var div=document.getElementById('div');
+        div.style.background ="url("+arr[number]+") no-repeat" ;
+    }
+
+    //在canvas上一个矩形蒙罩
+    var canvas=document.getElementById('mask');
+    var context =canvas.getContext('2d');
+    context.fillStyle = "grey";
+    context.fillRect(0,0,267,108);
+
+    //设置刮奖效果
+    context.globalCompositeOperation = "destination-out";
+     canvas.onmousedown= function(){
+        canvas.onmousemove=function(ev){
+            context.beginPath();
+            context.arc(ev.clientX,ev.clientY,20,0,2*Math.PI);
+            context.closePath();
+            context.fill();
+
+            //获取透明像素比,判断刮奖是否完成
+            judgeImgData();
+        }
+    }
+    //当鼠标松开时，停止刮奖
+    canvas.onmouseup=function(){
+        canvas.onmousemove=function(){}        
+    }
+
+    //获取透明像素比,判断刮奖是否完成
+    function judgeImgData(){
+        var imgData =context.getImageData(0,0,267,108);
+        var data = imgData.data;
+        var length=data.length;
+        var num=0;
+        for(var i=0;i<length;i+=4){
+            if(data[i+3]<10)
+            {
+                num++;
+            }
+        }
+        if(num/(length/4)>0.85){
+            context.clearRect(0,0,267,108);  
+        }
+    }
+</script>
+</html>
