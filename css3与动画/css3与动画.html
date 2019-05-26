@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css3与动画</title>
+    <style>
+        img{
+            width:390px;
+            height: 500px;
+        }
+        .all{
+            width:390px;
+            height: 500px;       
+            border: 5px solid gainsboro;
+            overflow: hidden;
+            position: relative;
+            
+        }
+        .top{
+            width: 50px;
+            height: 50px;
+            color: white;
+            font-weight: bold;
+            background: orangered;
+            border-radius: 50%;
+            text-align: center;
+            float: left;
+            position: absolute;   
+            left:320px;
+            top:30px
+        }
+        .ctop{
+            background: orangered;
+            color: white;
+            font-size: 15px;
+            width: 60px;
+            height: 20px;
+            text-align: center;
+            position: relative;
+        }
+        .opacity{
+            position: absolute; /*相对于父元素进行定位*/  
+            left:0px;
+            top:0px;
+            width:390px;
+            height: 500px;
+            background:rgba(182, 177, 177, 0.5);
+            transform: scale(0,0);    /*放大0倍即隐藏！！*/
+            transition:transform  ease-in-out;
+        }
+        
+        .show{
+            background:white;
+            width: 390px;
+            height: 350px;
+            position: absolute;
+            top:280px;
+            
+        }
+        .content{
+            padding:0px 20px;
+        }
+        .content1{
+            width: 360px;
+            color: rgb(184, 178, 178,0);
+            font-size: 18px;
+            margin: 0px;  
+        }
+        .bottom{
+            color:rgb(190, 182, 182);
+            background:white;
+            height: 30px;
+            width:400px;
+            line-height: 30px;
+            position: absolute;
+            top:475px;
+        }
+        .all:hover{
+            border-color: rgb(170, 168, 168);
+        }
+        
+        .all:hover img{
+            transition:transform 0.5s ease-in-out;
+            transform: scale(1.2,1.2);
+            
+        }
+        .all:hover #opacity{
+            transform:scale(1,1);
+        } 
+        .all:hover .show{
+            transform: translateY(-100px);
+            transition: transform 0.5s ease-in-out; 
+        } 
+        .all:hover .content1{
+            color: rgb(184, 178, 178);
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <img src="zhanqiao.jpg">
+        <div class="opacity" id="opacity"></div>
+        <div class="top">
+                15</br>
+                五月
+        </div>
+        <div class="show">
+            <div class="ctop">
+                照片
+            </div>
+            <div class="content">
+                <h2>青岛栈桥</h2>
+                <h2 style="color:orangered ;font-weight: normal;margin:0px">国家AAAA级旅游景区</h2>
+                <div class="content1">
+                    <p style="margin: 0px " >
+                        青岛栈桥是青岛海滨风景区的景点之一，
+                        是国务院于1982年首批公布的国家级风景名胜区，也是首批国家AAAA级旅游景区 。
+                        青岛栈桥位于游人如织的青岛中山路南端，桥身从海岸探入如弯月般的青岛湾深处。
+                        桥身供游人参观并在此停靠旅游船，由此乘船可看海上青岛。 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <p style="padding: 0px 20px;float: left;margin: 0px">10分钟前</p>
+            <p style="float:left;margin:0px">123评论</p>
+        </div>
+    </div>
+    
+    
+</body>
+
+</html>
