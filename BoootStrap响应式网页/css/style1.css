@@ -1,0 +1,338 @@
+@media screen and (max-width:680px){
+    
+    header{
+        height: 0px;
+        background: white;
+    }
+    /*导航栏*/
+    .container{
+        background-color: white;
+        height: 108px;
+        padding: 15px 15px; 
+    }
+    .container-fluid{
+        position: relative;
+        z-index: 100;
+    }
+    .icon{
+        background-color: black;
+        margin: 8px 0px;
+    }
+    .navbar-brand img{
+        margin-right:0px;
+    } 
+    .navbar-toggle{
+        padding-left: 15px;
+    }
+    .navbar-brand{
+        padding: 15px 0px;
+    }
+    .navbar-nav{
+        background: #e1e1e1;;
+    }
+    .icon1{
+        display: block;
+        height: 50px;
+        width:142px;
+        float: right;
+        border-radius:15px;
+        background-color: #cb5405;
+        border:#cb5405;
+        color:white;
+        margin-top:8px;
+        text-align: center;
+       
+        font-size: 26px;
+        font-weight: lighter;
+    }
+    /* 轮播图 */
+    #c1{
+        display: block;
+    }
+    #c2{
+        display: none;
+    }
+    #generic{
+        height:300px;
+        overflow: hidden;
+        float: left;
+    }
+    .item div:first-child{
+        height: 300px;    
+    }
+    .carousel-caption {
+        font-weight: lighter;
+        position: absolute;
+        /* top:-5px; */
+        left: 1px;
+        color:white;
+    }
+    .carousel-caption h3{
+        font-weight: lighter;
+        position: absolute;
+        left: 70px;
+        color:white;
+        margin: 0px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+   #search{
+       width:360px;
+       margin-left:85px;
+   }
+   #search1{
+       width: 100px;
+   }
+   #search img{
+    float: left;
+    position: relative;
+    left:15px ;
+}
+   #search1 span{
+       font-size: 15px;
+       left:25px;
+   }
+   #search input{
+    float: left;
+    width: 150px;
+    height: 49px;
+    font-size: 12px;
+   }
+   #search button{
+    width: 110px;
+    }
+    #search button img{
+        left: 40px;
+    }
+    #span1{
+        height: 10px;
+        margin: 0
+    }
+    #span2{
+        display: none;
+    }
+
+
+    /* 机场接送 */
+    #banner{
+        height: 100%;
+        background: white;
+    }
+    .banner1{
+        padding:20px 0
+
+    }
+    .col-xs-3{
+        padding: 0
+    }
+    .banner3 button{
+        background-color: white;
+        border:1px solid #666666;
+        float: right;
+        margin-top:30px;
+        width: 130px;
+        height: 52px;
+        font-size: 20px;
+        
+        border-radius: 5px;
+        
+    }
+    .banner3 button a{
+        color:#666666;
+        font-weight: lighter;
+    }
+    .font1 { 
+        width: 280px;
+        height: 115px;
+        /* padding-top:36px; */
+        margin-left:15px;
+        float: left;
+    }
+    .font1 p{
+        color:#666666;
+        font-size: 15px;
+        font-weight: lighter;
+        text-align: left;
+        margin: 0px;
+    }
+    .font1 p:first-child{
+        color:#1c5080;
+        font-size: 30px;
+        margin-bottom:20px;
+    }
+    .banner3 img{
+        width: 97px;
+        height: 86px;
+        margin: 0px;
+        margin-top:45px;
+    }
+    /* 热门路线 */
+    
+    .row{
+        width:100%;
+    }
+    #road{
+        width:100%;
+        text-align: left;
+        padding:20px;
+        background: white;
+        margin-top:30px;
+    }
+    .img1 img{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .img1 h2{
+        float: right;
+    }
+    #road h2:first-child{
+        border-left:2px solid #cb5405;
+        padding-left: 5px;
+    }
+    .hot {
+        display: none;
+    }
+    .font2{
+        display: none;
+    }
+    .col-xs-6{
+        padding:0px;
+    }
+    .font3 p{
+        float: left;
+    }
+    .hot1{
+        width:100%;
+    }
+    .font3{
+        display: block;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.788); 
+        bottom:58%;
+    }
+    .font4{
+        display: none;
+    }
+    .hot11{
+        bottom:8%
+    } 
+
+    #road button{
+        display: block;
+        width: 150px;
+        height: 52px;
+        font-size: 20px;
+        border-radius: 5px;
+        background-color: white;
+        border:1px solid #666666;
+        float: right;
+        margin:40px 200px 40px 100px;
+    }
+    #road button a{
+        color:#666666;
+        font-weight: lighter;
+    }
+    #visa{
+        width: 100%;
+        background-color: white;
+        width:auto;
+        margin-top:30px;
+    }
+    #visa h2:first-child{
+        border-left:2px solid #cb5405;
+        padding-left: 5px;
+    }
+    .visa1{
+        width:100%;
+    }
+    .visa2{
+        border:5px solid white;
+    }
+    .xs{
+        display: block;
+    }
+    .md{
+        display: none;
+        
+    }
+    .visa3{
+        border-top:3px solid white;
+    }
+    .bottom{
+        top:30%;
+    }
+    #visa button{
+        width: 150px;
+        height: 52px;
+        font-size: 20px;
+        border-radius: 5px;
+        background-color: white;
+        border:1px solid #666666;
+        float: right;
+        margin:40px 200px 40px 100px;
+    }
+    #visa button a{
+        color:#666666;
+        font-weight: lighter;
+    }
+    /* 使命与愿景 */
+    #mission{
+        background:none;
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        margin-top:30px;
+    }
+    .xs h2:first-child{
+        border-left:2px solid #cb5405;
+        padding-left: 5px;
+        font-size:30px;
+        text-align: left;
+        margin: 25px 0px 0px;
+    }
+    .bm{
+        background:url(../img/back.png) no-repeat;
+        padding-top:45px;
+        margin-bottom: 20px;
+    }    
+    .container{
+        width: 100%;
+    }
+    .col-xs-12{
+        padding: 0;
+    }
+    .m2{
+        background-color: rgba(0, 0, 0, 0);
+        color:black;
+        font-size:23px;
+        width: 100%;
+        height: 100%;
+    }
+    .m2 h5{
+        width: 100%;
+        margin: 0;
+    }
+    .m5 h3{
+       padding: 20px 0"
+    }
+    .m6{
+        padding-bottom:40px ;
+    }
+    #bottom{
+        height: 100%;
+        background-color:#343235;
+
+    }
+    .b5{
+        float: left;
+        padding-top:100px;;
+        height:300px;
+        background-color:#343235;
+    }
+    .b5 p{
+        font-size:22px;
+    }
+
+    
+    
+}
